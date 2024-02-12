@@ -1,13 +1,60 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Professional Resume</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header, section { margin-bottom: 20px; }
+        h2 { color: #333; }
+        .section { margin-bottom: 20px; }
+        .skills-list, .work-experience, .projects { list-style-type: none; }
+        .skills-list li, .work-experience li, .projects li { margin-bottom: 10px; }
+    </style>
+</head>
 <body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Your Professional Headline</p>
+    </header>
 
-    <form action="http://waph-hackathon.eastus.cloudapp.azure.com/xss/level2/echo.php" method="post">
-        <input type="text" name="input" value="">
-        <input type="submit">
-    </form>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Introduce yourself here. Include a brief summary of your professional background, interests, and goals.</p>
+    </section>
+
+    <section id="technical-skills">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+            <li>Programming Languages: HTML, CSS, JavaScript</li>
+            <li>Frameworks/Libraries: React, Node.js</li>
+            <li>Tools: Git, Docker</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <ul class="work-experience">
+            <li>
+                <strong>Job Title at Company Name</strong> - Dates Employed
+                <p>Brief description of your responsibilities and achievements.</p>
+            </li>
+            <!-- Repeat for each position -->
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul class="projects">
+            <li>
+                <strong>Project Name</strong> - <a href="project-link">Project Link</a>
+                <p>Short description of the project, technologies used, and your role in the project.</p>
+            </li>
+            <!-- Repeat for each project -->
+        </ul>
+    </section>
 
 </body>
-
 </html>
