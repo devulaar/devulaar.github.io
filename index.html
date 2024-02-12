@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dennis Ivy</title>
-    <meta name="description" content="">
+    <title>Abinay Devulapally</title>
+    <meta name="description"
+        content="Professional portfolio of Abinay Devulapally, showcasing skills, work experience, and projects.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="#About">About</a></li>
-            <li><a href="#technical-skills">Technical Skills</a></li>
-            <li><a href="#work-history-wrapper">Work Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </nav>
+    <div id="container--main" class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#About">About</a>
+                <a class="nav-item nav-link" href="#technical-skills">Technical Skills</a>
+                <a class="nav-item nav-link" href="#work-history-wrapper">Work History</a>
+                <a class="nav-item nav-link" href="#projects">Projects</a>
+                <a class="nav-item nav-link" href="waph.html">Course Introduction</a>
+            </div>
+        </nav>
 
-    <div id="container--main">
-        <section id="About">
-            <section id="wrapper--hero" class="section--page">
-                <img id="profile-pic" src="./images/headshot.jpg">
-
+        <section id="About" class="section--page">
+            <div id="wrapper--hero" class="section--page">
+                <img id="profile-pic" src="./images/headshot.jpg" alt="Abinay Kumar Devulapally Headshot"
+                    class="img-thumbnail">
                 <div>
-                    <h1 id="user-name">Abinay Kumar Devulapally</h1>
+                    <h1 id="user-name-style"><a href="#About">Abinay Kumar Devulapally</a></h1>
                     <p id="bio">I am Devulapally Abinay Kumar, a dedicated software engineer specializing in cloud
                         solutions
                         and web development. Currently, I am advancing my knowledge by pursuing a Master’s in
@@ -45,45 +51,26 @@
                         and
                         optimizing processes, creating efficient solutions, and contributing to the advancement of
                         technology in the cloud computing.</p>
-                    <p id="email">👉devulaar@mail.uc.edu</p>
+                    <p id="email">👉 <a href="mailto:devulaar@mail.uc.edu">devulaar@mail.uc.edu</a></p>
                 </div>
-            </section>
-        </section>
-        <!-- 
-        <section class="section--page">
-
-            <div id="socials--list">
-                <a href="https://youtube.com/c/dennisivy" target="_blank">Youtube</a>
-                <a href="https://twitter.com/dennisivy11" target="_blank">Twitter</a>
-                <a href="https://www.linkedin.com/in/dennis-ivanov/" target="_blank">Linkedin</a>
-                <a href="https://github.com/divanov11" target="_blank">Github</a>
-                <a href="./assets/resume.pdf" target="_blank">Download Resume</a>
             </div>
-        </section> -->
-
-        <section id="technical-skills" class="section--page">
-            <h2>Technical Skills</h2>
-            <ul id="qualifications--list">
-                <li>JavaScript, Java, C, SQL (PostgreSQL ), Python, NoSQL (MongoDB), Go, Arduino Programming.</li>
-                <li>Frameworks: React, Node.js, TypeScript, Express.js, Flask, Django, OpenAPI, Robot Framework, Machine
-                    Learning</li>
-                <li>Developer Tools: Git, Docker, Kubernetes, Jenkins, OpenStack, AWS, Postman, Ansible, VS Code,
-                    MATLAB. </li>
-                <li>Other Skills: Unity, Unreal Engine, Grafana, Prometheus, Victoriametrics.</li>
-            </ul>
         </section>
 
-        <!-- <section class="section--page">
-                <h2>Tech stack</h2>
+        <!-- Technical Skills Section -->
+        <section id="technical-skills" class="section--page">
+            <div id="skills-app">
+                <h2>Technical Skills</h2>
+                <ul id="qualifications--list">
+                    <li><strong style="color: brown;">Languages:</strong> {{ allLanguages }}.</li>
+                    <li><strong style="color: brown;">Frameworks:</strong> {{ allFrameworks }}.</li>
+                    <li><strong style="color: brown;">Developer Tools:</strong> {{ allDeveloperTools }}.</li>
+                    <li><strong style="color: brown;">otherSkills:</strong> {{ allotherSkills }}.</li>
+                </ul>
+            </div>
 
-                <div id="wrapper--techstack__items">
-                    <div class="card--techstack"><span>Python, JavaScript, NodeJS</span></div>
-                    <div class="card--techstack"><span>Django, Express, Flask, FastAPI</span></div>
-                    <div class="card--techstack"><span>React, Next JS</span></div>
-                    <div class="card--techstack"><span>Postgres, MongoDB, MySQL</span></div>
-                </div>
-            </section> -->
+        </section>
 
+        <!-- Work History Section -->
         <section id="work-history-wrapper" class="section--page">
             <h2>Work History</h2>
 
@@ -91,9 +78,10 @@
             <div class="card--work-history">
                 <strong>DevOps Engineer | Tata Consultancy and Services </strong>
                 <p>June 2021 – Aug 2023</p>
-                <p>Worked on making Agora’s Web Based SDK more accessible through video tutorials, articles, demo
-                    projects and event based training. Also building out React UI components & leading a team to
-                    re-design Agora’s documentation and api reference.</p>
+                <p>I have 2 years of experience in designing and developing advanced cloud solutions for the telecom
+                    industry, leveraging technologies like Docker, Kubernetes, and Python. My work includes building a
+                    cloud monitoring dashboard, enhancing container management, ensuring virtual machine reliability,
+                    and contributing to open-source projects to improve cloud operations.</p>
                 <ul>
                     <li>Design and develop cutting-edge cloud solutions for the telecom domain, leveraging the latest
                         technologies and best
@@ -121,7 +109,9 @@
             <div class="card--work-history">
                 <strong>SDE Intern and Research Assistant</strong>
                 <p>Jan 2020 – Feb 2020</p>
-                <p>Produced content showcasing new tech, tutorials & interviews with top developers.</p>
+                <p>As an SDE Intern at Nokia Solutions and Networks, I automated manual processes, developed a
+                    voice-controlled web application, and explored telecom module manufacturing, enhancing my web
+                    development and Python skills.</p>
                 <ul>
                     <li>As an intern in the Automation Team, I played a key role in automating industry-specific manual
                         processes.
@@ -135,25 +125,164 @@
                         web development and Python automation as a member of the Research and Development Team.</li>
                 </ul>
             </div>
-
-
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="section--page">
             <h2>Projects</h2>
 
             <div class="card--project">
                 <strong>Image Classification Website</strong>
+                <li>Developed a user-based image classification website leveraging the You Only Look Once (YOLO)
+                    algorithm for
+                    accurate and efficient object detection.</li>
+                <li>Implemented deep neural networks (DNN) using the TensorFlow framework to classify images based on
+                    uploaded
+                    data sets.</li>
+                <li>Enabled users to train and classify images based on their input data sets through the website, while
+                    seamlessly
+                    integrating the back-end algorithm using Python web API development with the Flask framework.</li>
             </div>
             <div class="card--project">
                 <strong>Enhanced E-Commerce Platform Development</strong>
+                <li>Created a robust e-commerce platform with advanced features by using React.js for the front end,
+                    Node.js and
+                    Express.js for the backend, and PostgreSQL for efficient database management.</li>
+                <li>TypeScript was employed to enhance code maintainability. Integrated third-party payment processing
+                    and secure
+                    user authentication mechanisms.</li>
+                <li>Successfully delivered a fully functional e-commerce platform with dynamic features, optimal
+                    performance, and
+                    enhanced maintainability through TypeScript.</li>
             </div>
-
 
         </section>
 
+        <section id="waph-projects" class="section--page">
+            <h2>WAPH Projects</h2>
+            <div class="card--project"> <strong>Displaying Real Time Weather Updates</strong>
+                <p id="weather"></p>
+            </div>
+            <div class="card--project"> <strong>GitHub Repositories fetch with Web Api Integration</strong>
+                <p id="github-repos"></p>
+            </div>
 
+            <div class="card--project"><strong>Displaying Random Joke with Web API
+                    Integration</strong>
+
+                <p id="joke-container"></p>
+            </div>
+        </section>
     </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <!-- <script src="./scripts/main.js"></script> -->
+    <script>
+        // Simple visit counter using cookies
+        // if (document.cookie.split(';').some((item) => item.trim().startsWith('visitCount='))) {
+        //     let visits = document.cookie.replace(/(?:(?:^|.*;\s*)visitCount\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+        //     visits = parseInt(visits) + 1;
+        //     document.cookie = "visitCount=" + visits + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        // } else {
+        //     document.cookie = "visitCount=1;expires=Fri, 31 Dec 9999 23:59:59 GMT";
+        //     console.log("Welcome for the first time!");
+        // }
+        // Check if the 'lastVisit' cookie exists
+        if (document.cookie.indexOf("lastVisit") >= 0) {
+            var lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            alert("Welcome back! Your last visit was " + lastVisit);
+        } else {
+            alert("Welcome to my homepage!");
+        }
+        var now = new Date();
+        var expiry = new Date(now.getTime() + 30 * 24 * 3600 * 1000); // Cookie expires in 30 days
+        document.cookie = "lastVisit=" + now + "; expires=" + expiry.toUTCString() + "; path=/";
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://api.github.com/users/devulaar/repos",
+                type: "GET",
+                success: function (repos) {
+                    var reposList = "<ul>";
+                    for (var i = 0; i < repos.length; i++) {
+                        reposList += "<li><a href='" + repos[i].html_url + "' target='_blank'>" + repos[i].name + "</a></li>";
+                    }
+                    reposList += "</ul>";
+                    // Assuming you have a div with id="github-repos" in your HTML
+                    console.log(reposList)
+                    $("#github-repos").html(reposList);
+                }
+            });
+        });
+
+        new Vue({
+            el: '#skills-app',
+            data: {
+                Languages: ['JavaScript', 'Java', 'C', 'SQL (PostgreSQL)', 'Python', 'NoSQL (MongoDB)', 'Go', 'Arduino Programming'],
+                Frameworks: ['React', 'Node.js', 'TypeScript', 'Express.js', 'Flask', 'Django', 'OpenAPI', 'Robot Framework', 'Machine Learning'],
+                DeveloperTools: ["Git", "Docker", "Kubernetes", "Jenkins", "OpenStack", "AWS", "Postman", "Ansible", "VS Code", "MATLAB"],
+                otherSkills: ["Unity", "Unreal Engine", "Grafana", "Prometheus", "Victoriametrics"]
+            },
+            computed: {
+                allLanguages() {
+                    return this.Languages.join(', ');
+                },
+                allFrameworks() {
+                    return this.Frameworks.join(', ');
+                },
+                allDeveloperTools() {
+                    return this.DeveloperTools.join(', ');
+                },
+                allotherSkills() {
+                    return this.otherSkills.join(', ');
+                }
+            }
+        });
+
+        function fetchJoke() {
+            $.ajax({
+                url: 'https://v2.jokeapi.dev/joke/Any',
+                type: 'GET',
+                success: function (data) {
+                    var joke = data.setup ? data.setup + ' ' + data.delivery : data.joke;
+                    $('#joke-container').text(joke);
+                },
+                error: function () {
+                    $('#joke-container').text('Failed to load joke.');
+                }
+            });
+        }
+
+        fetchJoke(); // Fetch immediately
+        setInterval(fetchJoke, 60000); // Fetch every 1 minute
+
+        $(document).ready(function () {
+            var apiKey = 'aa2024a9eb2c48ddb06349a3b2fcabf0';
+            var url = `https://api.weatherbit.io/v2.0/current?&key=${apiKey}&city=Cincinnati&country=US`;
+
+            $.get(url, function (data) {
+                var temp = data.data[0].temp;
+                var description = data.data[0].weather.description;
+                $('#weather').html(`Current Temperature in Cincinnati: ${temp}°C, ${description}`);
+            });
+        });
+    </script>
+    <footer id="contact-info">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to contact me:</p>
+            <p>Email: <a href="mailto:devulaar@mail.uc.edu">devulaar@mail.uc.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/abinay-kumar/"
+                    target="_blank">linkedin.com/in/abinay-kumar</a></p>
+        </div>
+    </footer>
+    <!-- Flag Counter -->
+    <a href="http://s01.flagcounter.com/more/EXT"><img
+            src="https://s01.flagcounter.com/count2/EXT/bg_FFFFFF/txt_000000/border_CCCCCC/columns_3/maxflags_6/viewers_0/labels_1/pageviews_1/flags_0/percent_0/"
+            alt="Flag Counter" border="0"></a>
+
 
 </body>
 

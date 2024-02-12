@@ -117,6 +117,20 @@ li{
     font-size: 0.9em;
 }
 
+#user-name-style {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    text-align: center; 
+    color: #b0d2e8; 
+    text-transform: uppercase;
+    letter-spacing: 0.15em; 
+    text-shadow: 2px 2px 4px #768695; 
+    background-image: linear-gradient(45deg, #0b2334, #082c44); 
+    padding: 10px 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    margin: 20px 0; 
+  }
+
 .card--techstack{
     border: 1px solid var(--mainBorderColor);
     border-radius: 5px;
@@ -153,6 +167,21 @@ li{
     height: 1px;
 }
 
+footer#contact-info {
+    background-color: #131415; /* Light grey background */
+    padding: 20px 0; /* Padding above and below */
+    text-align: center; /* Centered text */
+  }
+  footer#contact-info h2 {
+    margin-bottom: 10px; /* Spacing below the title */
+  }
+  footer#contact-info a {
+    color: #007bff; /* Bootstrap primary blue for links */
+    text-decoration: none; /* No underline */
+  }
+  footer#contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for better user experience */
+  }
 
 @media(max-width:600px){
 
