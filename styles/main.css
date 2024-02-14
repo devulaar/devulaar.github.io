@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
 
 :root{
-    --mainTextColor-light:#000;
-    --secondaryTextColor-light:rgb(51 51 51);
-    --mainLinkColor-light:#0da2b8;
-    --mainBorderColor-light:rgb(218, 218, 218);
-    --mainBgColor-light:rgb(249, 250,251);
 
     --mainTextColor-dark:#fff;
     --secondaryTextColor-dark:#adb0b1;
@@ -86,35 +81,8 @@ li{
     color: var(--mainTextColor);
 }
 
-#socials--list{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1em;
-    flex-wrap: wrap;
-}
-
-#socials--list a{
-    font-weight: 300;
-    color: var(--secondaryTextColor);
-    font-size: 0.9em;
-    transition: 0.3s;
-}
-
-#socials--list a:hover{
-    font-weight: 100;
-    color: var(--mainLinkColor);
-    font-size: 0.9em;
-}
-
 #qualifications--list{
     list-style: none;
-}
-
-#wrapper--techstack__items{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    font-size: 0.9em;
 }
 
 #user-name-style {
@@ -131,12 +99,6 @@ li{
     margin: 20px 0; 
   }
 
-.card--techstack{
-    border: 1px solid var(--mainBorderColor);
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    align-items: center;
-}
 
 .card--project{
     padding-top: 1em;
@@ -168,19 +130,19 @@ li{
 }
 
 footer#contact-info {
-    background-color: #131415; /* Light grey background */
-    padding: 20px 0; /* Padding above and below */
-    text-align: center; /* Centered text */
+    background-color: #131415; 
+    padding: 20px 0; 
+    text-align: center;
   }
   footer#contact-info h2 {
-    margin-bottom: 10px; /* Spacing below the title */
+    margin-bottom: 10px; 
   }
   footer#contact-info a {
-    color: #007bff; /* Bootstrap primary blue for links */
-    text-decoration: none; /* No underline */
+    color: #007bff;
+    text-decoration: none; 
   }
   footer#contact-info a:hover {
-    text-decoration: underline; /* Underline on hover for better user experience */
+    text-decoration: underline; 
   }
 
 @media(max-width:600px){

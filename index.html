@@ -17,13 +17,16 @@
 
 <body>
     <div id="container--main" class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#About">About</a>
-                <a class="nav-item nav-link" href="#technical-skills">Technical Skills</a>
-                <a class="nav-item nav-link" href="#work-history-wrapper">Work History</a>
-                <a class="nav-item nav-link" href="#projects">Projects</a>
-                <a class="nav-item nav-link" href="waph.html">Course Introduction</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="#About">About</a>
+                    <a class="nav-item nav-link" href="#education">Education</a>
+                    <a class="nav-item nav-link" href="#technical-skills">Technical Skills</a>
+                    <a class="nav-item nav-link" href="#work-history-wrapper">Work History</a>
+                    <a class="nav-item nav-link" href="#projects">Projects</a>
+                    <a class="nav-item nav-link" href="waph.html">Course Introduction</a>
+                </div>
             </div>
         </nav>
 
@@ -56,7 +59,22 @@
             </div>
         </section>
 
-        <!-- Technical Skills Section -->
+        <section id="education" class="section--page">
+            <h2>Education</h2>
+
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <p><strong>University Of Cincinnati </strong>Cincinnati, OH</p>
+                <i>Master’s in Information Technology-</i> Aug. 2023 – Dec 2024
+            </div>
+
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <p><strong>B V Raju Institute of Technology </strong>High Honors with GPA 9.79 - Narsapur, TS</p>
+                <i>Bachelor of Technology in Electronics and Communication Engineering-</i> Aug. 2017 – June 2021
+            </div>
+        </section>
+
         <section id="technical-skills" class="section--page">
             <div id="skills-app">
                 <h2>Technical Skills</h2>
@@ -160,6 +178,7 @@
 
         <section id="waph-projects" class="section--page">
             <h2>WAPH Projects</h2>
+            <div id="comic"></div>
             <div class="card--project"> <strong>Displaying Real Time Weather Updates</strong>
                 <p id="weather"></p>
             </div>
@@ -175,21 +194,7 @@
         </section>
     </div>
 
-    <!-- JavaScript for Bootstrap -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JavaScript -->
-    <!-- <script src="./scripts/main.js"></script> -->
     <script>
-        // Simple visit counter using cookies
-        // if (document.cookie.split(';').some((item) => item.trim().startsWith('visitCount='))) {
-        //     let visits = document.cookie.replace(/(?:(?:^|.*;\s*)visitCount\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-        //     visits = parseInt(visits) + 1;
-        //     document.cookie = "visitCount=" + visits + ";expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        // } else {
-        //     document.cookie = "visitCount=1;expires=Fri, 31 Dec 9999 23:59:59 GMT";
-        //     console.log("Welcome for the first time!");
-        // }
-        // Check if the 'lastVisit' cookie exists
         if (document.cookie.indexOf("lastVisit") >= 0) {
             var lastVisit = document.cookie.replace(/(?:(?:^|.*;\s*)lastVisit\s*\=\s*([^;]*).*$)|^.*$/, "$1");
             alert("Welcome back! Your last visit was " + lastVisit);
@@ -210,7 +215,6 @@
                         reposList += "<li><a href='" + repos[i].html_url + "' target='_blank'>" + repos[i].name + "</a></li>";
                     }
                     reposList += "</ul>";
-                    // Assuming you have a div with id="github-repos" in your HTML
                     console.log(reposList)
                     $("#github-repos").html(reposList);
                 }
@@ -255,8 +259,8 @@
             });
         }
 
-        fetchJoke(); // Fetch immediately
-        setInterval(fetchJoke, 60000); // Fetch every 1 minute
+        fetchJoke();
+        setInterval(fetchJoke, 60000);
 
         $(document).ready(function () {
             var apiKey = 'aa2024a9eb2c48ddb06349a3b2fcabf0';
@@ -268,6 +272,7 @@
                 $('#weather').html(`Current Temperature in Cincinnati: ${temp}°C, ${description}`);
             });
         });
+
     </script>
     <footer id="contact-info">
         <div class="container">
