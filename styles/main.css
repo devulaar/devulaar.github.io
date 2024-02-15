@@ -44,6 +44,14 @@ li{
     line-height: 1.9em;
 }
 
+#digit-clock {
+    color: red;
+  }
+
+#analog-clock {
+    background-color: #999;
+  }
+
 #container--main{
     max-width: 700px;
     margin: 0 auto;
