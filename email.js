@@ -1,6 +1,5 @@
 var shown = false;
 function showhideEmail() {
-  console.log("hi");
   if (shown) {
     document.getElementById("email").innerHTML = "Show my email";
     shown = false;
@@ -11,7 +10,7 @@ function showhideEmail() {
       "ucmail. uc.edu'>devulaar" +
       "@" +
       "ucmail.uc.edu</a>";
-    document.getElementById("email").innerHTML = myemail;
+    document.getElementById("email-id").innerHTML = myemail;
     shown = true;
   }
 }

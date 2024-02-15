@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <link rel="stylesheet" href=https://waph-uc.github.io/style1.css>
 </head>
 
 <body>
@@ -177,24 +176,21 @@
 
         <section id="waph-projects" class="section--page">
             <h2>Technical requirements-1</h2>
-            <!-- Digital Clock -->
+            <div>
+                <div id="email-id" onclick="showhideEmail()">Show my Email</div>
+                <script src="email.js"></script>
+            </div>
+            <br>
             <div id="app">
                 <p>Current time: {{ currentTime }}</p>
             </div>
-
-            <!-- Analog Clock -->
             <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
             <script src="https://waph-uc.github.io/clock.js"></script>
+            <br>
 
-            <!-- Show/Hide Email -->
             <p v-html="emailText"></p>
-            <button @click="toggleEmail">Toggle Email</button>
-
-            <!-- Additional Functionality (Button to change background color) -->
-            <button @click="changeBgColor">Change Background Color</button>
-
-
-            <!-- Custom JavaScript (Vue.js) -->
+            <button @click="toggleEmail" style="color: red;">Toggle Email</button>
+            <button @click="changeBgColor" style="color: red;">Change Background Color</button>
             <script src="script-vue.js"></script>
         </section>
 
@@ -291,7 +287,8 @@
             $.get(url, function (data) {
                 var temp = data.data[0].temp;
                 var description = data.data[0].weather.description;
-                $('#weather').html(`Current Temperature in Cincinnati: ${temp}°C, ${description}`);
+                var windSpeed = response.data[0].wind_spd;
+                $('#weather').html(`Current Temperature in Cincinnati: ${temp}°C, and windspeed ${windSpeed} ,${description}`);
             });
         });
 

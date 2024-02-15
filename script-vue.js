@@ -6,13 +6,11 @@ new Vue({
     shown: false,
   },
   mounted() {
-    // Digital Clock
     setInterval(() => {
       this.currentTime = "Current time: " + new Date();
     }, 500);
   },
   methods: {
-    // Show/Hide Email
     toggleEmail() {
       if (this.shown) {
         this.emailText = "Click the button to toggle email.";
@@ -23,15 +21,12 @@ new Vue({
         this.shown = true;
       }
     },
-    // Additional Functionality (Change Background Color)
     changeBgColor() {
-      // Change background color to a random color
       document.body.style.backgroundColor = getRandomColor();
     },
   },
 });
 
-// Function to get a random color
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
