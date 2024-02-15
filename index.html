@@ -10,9 +10,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./styles/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+    <style>
+        :root {
+
+            --mainTextColor-dark: #fff;
+            --secondaryTextColor-dark: #adb0b1;
+            --mainLinkColor-dark: rgb(30, 190, 214);
+            --mainBorderColor-dark: #2b3031;
+            --mainBgColor-dark: #131415;
+
+            --mainTextColor: var(--mainTextColor-dark);
+            --secondaryTextColor: var(--secondaryTextColor-dark);
+            --mainLinkColor: var(--mainLinkColor-dark);
+            --mainBorderColor: var(--mainBorderColor-dark);
+            --mainBgColor: var(--mainBgColor-dark);
+
+        }
+
+
+        * {
+            font-family: 'Readex Pro';
+            line-height: 1.5em;
+            box-sizing: border-box;
+            color: var(--mainTextColor);
+
+        }
+
+        body {
+            background-color: var(--mainBgColor);
+        }
+
+        p,
+        span,
+        li {
+            color: var(--secondaryTextColor);
+            font-size: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--mainLinkColor);
+            font-weight: 500;
+        }
+
+        li {
+            line-height: 1.9em;
+        }
+
+        #digit-clock {
+            color: red;
+        }
+
+        #analog-clock {
+            background-color: #999;
+        }
+
+        #container--main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        .section--page {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #wrapper--hero {
+            display: flex;
+            align-items: center;
+            gap: 4em;
+        }
+
+        #bio,
+        a {
+            font-weight: 300;
+        }
+
+        #user-name {
+            font-size: 48px;
+            line-height: 1em;
+        }
+
+        #profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #email {
+            color: var(--mainTextColor);
+        }
+
+        #qualifications--list {
+            list-style: none;
+        }
+
+        #user-name-style {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: #b0d2e8;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            text-shadow: 2px 2px 4px #768695;
+            background-image: linear-gradient(45deg, #0b2334, #082c44);
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+
+        .card--project {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-top: 1px solid var(--mainBorderColor);
+        }
+
+        .card--project a {
+            color: var(--mainTextColor);
+
+            transition: 0.3s;
+        }
+
+        .card--project a:hover {
+            color: rgb(30, 190, 214);
+
+        }
+
+        .card--work-history {
+            border-left: 1px solid var(--mainBorderColor);
+            margin-top: 3em;
+            margin-bottom: 3em;
+            padding-left: 2em;
+        }
+
+        .line-break {
+            background-color: var(--mainBorderColor);
+            height: 1px;
+        }
+
+        footer#contact-info {
+            background-color: #131415;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer#contact-info h2 {
+            margin-bottom: 10px;
+        }
+
+        footer#contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer#contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media(max-width:600px) {
+
+            .section--page {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            #wrapper--hero {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+            }
+
+            #profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            #wrapper--hero {
+                flex-direction: column;
+            }
+
+            .card--work-history {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -178,7 +367,23 @@
             <h2>Technical requirements-1</h2>
             <div>
                 <div id="email-id" onclick="showhideEmail()">Show my Email</div>
-                <script src="email.js"></script>
+                <script>var shown = false;
+                    function showhideEmail() {
+                        if (shown) {
+                            document.getElementById("email").innerHTML = "Show my email";
+                            shown = false;
+                        } else {
+                            var myemail =
+                                "<a href= 'mailto:devulaar" +
+                                "@" +
+                                "mail. uc.edu'>devulaar" +
+                                "@" +
+                                "mail.uc.edu</a>";
+                            document.getElementById("email-id").innerHTML = myemail;
+                            shown = true;
+                        }
+                    }
+                </script>
             </div>
             <br>
             <div id="app">
@@ -191,7 +396,6 @@
             <p v-html="emailText"></p>
             <button @click="toggleEmail" style="color: red;">Toggle Email</button>
             <button @click="changeBgColor" style="color: red;">Change Background Color</button>
-            <script src="script-vue.js"></script>
         </section>
 
         <section id="waph-projects" class="section--page">
@@ -308,6 +512,43 @@
             drawNumbers(ctx, radius);
 
             drawTime(ctx, radius);
+        }
+        new Vue({
+            el: "#app",
+            data: {
+                currentTime: "",
+                emailText: "Click the button to toggle email.",
+                shown: false,
+            },
+            mounted() {
+                setInterval(() => {
+                    this.currentTime = "Current time: " + new Date();
+                }, 500);
+            },
+            methods: {
+                toggleEmail() {
+                    if (this.shown) {
+                        this.emailText = "Click the button to toggle email.";
+                        this.shown = false;
+                    } else {
+                        this.emailText =
+                            "<a href='mailto:devulaar@ucmail.uc.edu'>devulaar@ucmail.uc.edu</a>";
+                        this.shown = true;
+                    }
+                },
+                changeBgColor() {
+                    document.body.style.backgroundColor = getRandomColor();
+                },
+            },
+        });
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
         }
     </script>
     <footer id="contact-info">
